@@ -1,0 +1,129 @@
+*, 
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  font-family: 'Gotham Pro', sans-serif;
+}
+
+.page {
+  background-color: #e7deff;
+  padding: 12.5px;
+}
+
+.main {
+  
+}
+
+.day-list {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 12.5px;
+  row-gap: 20px;
+}
+
+.day-card__day {
+  text-transform: uppercase;
+}
+
+.day-card__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.day-card__content {
+  border-radius: 10px;
+  background-color: #EDEDED;
+  padding: 5px 10px;
+}
+
+.day-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subject-school:last-of-type,
+.subject-note:last-of-type {
+  padding-block-end: 10px;
+  /* border-bottom: 2px solid #EDEDED; */
+}
+
+.subject-train:last-of-type {
+  padding-block-end: 10px;
+}
+
+.subject-school:first-of-type,
+.subject-note:first-of-type,
+.subject-train:first-of-type {
+  padding-block-start: 5px;
+}
+
+.subject {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.subject-name {
+  min-height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  text-align: center;
+}
+
+.subject-name__school {
+  background-color: #D4F6F9;
+}
+
+.subject-name__school-section {
+  background-color: #FFE6B8;
+}
+
+.subject-name__note {
+  background-color: #FF9090;
+}
+
+.subject-name__train {
+  background-color: #E5FFDE;
+}
+
+.time {
+  width: 50px;
+  flex-shrink: 0;
+  height: 22px;
+  display: block;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.day-card__things {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  list-style-type: disc;
+  margin-block-end: 5px;
+}
+
+.day-card__thing {
+  margin-inline-start: 20px;
+}
