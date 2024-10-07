@@ -15,18 +15,14 @@ ul {
 }
 
 .page {
-  background-color: #e7deff;
+  background-color: #d8d8d8;
   padding: 12.5px;
-}
-
-.main {
-  
 }
 
 .day-list {
   display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 410px));
   column-gap: 12.5px;
   row-gap: 20px;
 }
@@ -44,19 +40,19 @@ ul {
 .day-card__content {
   border-radius: 10px;
   background-color: #EDEDED;
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 
 .day-card__list {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-block-end: 5px;
 }
 
 .subject-school:last-of-type,
 .subject-note:last-of-type {
   padding-block-end: 10px;
-  /* border-bottom: 2px solid #EDEDED; */
 }
 
 .subject-train:last-of-type {
@@ -93,7 +89,7 @@ ul {
 }
 
 .subject-name__school-section {
-  background-color: #FFE6B8;
+  background-color: #E5FFDE;
 }
 
 .subject-name__note {
@@ -101,7 +97,7 @@ ul {
 }
 
 .subject-name__train {
-  background-color: #E5FFDE;
+  background-color: #FFE6B8;
 }
 
 .time {
@@ -117,11 +113,10 @@ ul {
 }
 
 .day-card__things {
+  list-style-type: disc;
   padding: 5px;
   border-radius: 5px;
   background-color: #fff;
-  list-style-type: disc;
-  margin-block-end: 5px;
 }
 
 .day-card__thing {
