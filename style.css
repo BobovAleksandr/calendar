@@ -173,6 +173,11 @@ ul {
   opacity: 0.5;
 }
 
+.dialog-add-note:open {
+  display: block;
+  background-color: red;
+}
+
 .button-close {
   width: 40px;
   aspect-ratio: 1 / 1;
@@ -189,7 +194,7 @@ ul {
 
 .input-add-note__date {
   width: 100%;
-  min-height: 2em;
+  min-height: 3em;
 }
 
 .add-note-button-submit {
@@ -198,4 +203,12 @@ ul {
   min-height: 3em;
   border-radius: 5px;
   color: #fff;
+}
+
+.add-note-button-submit:hover {
+  background-color: #ad2626;
+}
+
+.add-note-button-submit:active {
+  background-color: #d54848;
 }

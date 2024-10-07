@@ -3,9 +3,12 @@ import { days } from './database.js'
 const subjectTemplate = document.querySelector('#subjectTemplate').content
 const thingTemplate = document.querySelector('#thingTemplate').content
 
-const addButton = document.querySelector('.button-add-note')
-const addDialog = document.querySelector('.dialog-add-note')
-const addDialogCloseButton = document.querySelector('.button-close')
+const addNoteButton = document.querySelector('.button-add-note')
+const addNoteDialog = document.querySelector('.dialog-add-note')
+const addNoteDialogCloseButton = document.querySelector('.button-close')
+const addNoteForm = document.forms['form-add-note']
+const addNoteInputDate = addNoteForm.elements['input-add-note__date']
+const addNoteInputText = addNoteForm.elements['input-add-note__text']
 
 function createSubjectElement(subject) {
   const newSubjectElement = subjectTemplate.querySelector('.subject').cloneNode(true)
@@ -25,14 +28,21 @@ function createThingElement(thing) {
   return newThingElement
 }
 
-addButton.addEventListener('click', () => { addDialog.showModal() })
-addDialog.addEventListener('click', (evt) => {
+addNoteButton.addEventListener('click', () => { addNoteDialog.showModal() })
+
+addNoteDialog.addEventListener('click', evt => {
   if (evt.target === evt.currentTarget) {
-    addDialog.close()
+    addNoteDialog.close()
   }
 })
-addDialogCloseButton.addEventListener('click', () => {
-  addDialog.close()
+
+addNoteDialogCloseButton.addEventListener('click', () => {
+  addNoteDialog.close()
+})
+
+addNoteForm.addEventListener('submit', evt => {
+  evt.preventDefault()
+
 })
 
 
