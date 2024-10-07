@@ -14,7 +14,7 @@ ul {
   font-family: 'Gotham Pro', sans-serif;
 }
 
-.page {
+.page { 
   background-color: #d8d8d8;
   padding: 12.5px;
 }
@@ -121,4 +121,29 @@ ul {
 
 .day-card__thing {
   margin-inline-start: 20px;
+}
+
+.button {
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  background-color: #d54848;
+  border: none;
+  font-size: 40px;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #ad2626;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #d54848;
+}
+
+.button-add-note {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
