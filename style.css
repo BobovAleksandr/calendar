@@ -126,14 +126,16 @@ ul {
 
 .button {
   border: none;
+  outline: none;
+  font-family: inherit;
 }
 
-.button:hover {
+.button-add-note:hover {
   background-color: #ad2626;
   cursor: pointer;
 }
 
-.button:active {
+.button-add-note:active {
   background-color: #d54848;
 }
 
@@ -148,7 +150,6 @@ ul {
   font-size: 40px;
   color: #fff;
 }
-
 
 .dialog-add-note {
   position: absolute;
@@ -173,11 +174,28 @@ ul {
 }
 
 .button-close {
-  width: 30px;
+  width: 40px;
   aspect-ratio: 1 / 1;
   position: absolute;
   right: 0;
   top: 0;
   background-image: url(./images/cross.svg);
-  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.input-add-note {
+  margin-block-start: 5px;
+}
+
+.input-add-note__date {
+  width: 100%;
+  min-height: 2em;
+}
+
+.add-note-button-submit {
+  background-color: #d54848;
+  font-size: 16px;
+  min-height: 3em;
+  border-radius: 5px;
+  color: #fff;
 }

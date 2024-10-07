@@ -5,6 +5,7 @@ const thingTemplate = document.querySelector('#thingTemplate').content
 
 const addButton = document.querySelector('.button-add-note')
 const addDialog = document.querySelector('.dialog-add-note')
+const addDialogCloseButton = document.querySelector('.button-close')
 
 function createSubjectElement(subject) {
   const newSubjectElement = subjectTemplate.querySelector('.subject').cloneNode(true)
@@ -29,6 +30,9 @@ addDialog.addEventListener('click', (evt) => {
   if (evt.target === evt.currentTarget) {
     addDialog.close()
   }
+})
+addDialogCloseButton.addEventListener('click', () => {
+  addDialog.close()
 })
 
 
