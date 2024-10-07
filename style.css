@@ -14,7 +14,8 @@ ul {
   font-family: 'Gotham Pro', sans-serif;
 }
 
-.page { 
+.page {
+  position: relative;
   background-color: #d8d8d8;
   padding: 12.5px;
 }
@@ -124,13 +125,7 @@ ul {
 }
 
 .button {
-  border-radius: 50%;
-  width: 50px;
-  aspect-ratio: 1 / 1;
-  background-color: #d54848;
   border: none;
-  font-size: 40px;
-  color: #fff;
 }
 
 .button:hover {
@@ -143,7 +138,46 @@ ul {
 }
 
 .button-add-note {
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  background-color: #d54848;
   position: fixed;
   right: 20px;
   bottom: 20px;
+  font-size: 40px;
+  color: #fff;
+}
+
+
+.dialog-add-note {
+  position: absolute;
+  margin-inline: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #EDEDED;
+}
+
+.form-add-note {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dialog-add-note::backdrop {
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.button-close {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(./images/cross.svg);
+  background-repeat: no-repeat;
 }

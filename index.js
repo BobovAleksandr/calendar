@@ -3,6 +3,9 @@ import { days } from './database.js'
 const subjectTemplate = document.querySelector('#subjectTemplate').content
 const thingTemplate = document.querySelector('#thingTemplate').content
 
+const addButton = document.querySelector('.button-add-note')
+const addDialog = document.querySelector('.dialog-add-note')
+
 function createSubjectElement(subject) {
   const newSubjectElement = subjectTemplate.querySelector('.subject').cloneNode(true)
   const subjectName = newSubjectElement.querySelector('.subject-name')
@@ -12,7 +15,6 @@ function createSubjectElement(subject) {
   subjectName.textContent = subject.name
   timeStart.textContent = subject.timeStart
   timeEnd.textContent = subject.timeEnd
-
   return newSubjectElement
 }
 
@@ -21,6 +23,19 @@ function createThingElement(thing) {
   newThingElement.textContent = thing
   return newThingElement
 }
+
+addButton.addEventListener('click', () => { addDialog.showModal() })
+addDialog.addEventListener('click', (evt) => {
+  if (evt.target === evt.currentTarget) {
+    addDialog.close()
+  }
+})
+
+
+
+
+
+
 
 days.forEach(day => {
   const currentDayList = document.querySelector(`.${day.engName}-card`).querySelector('.day-card__content')
@@ -37,4 +52,5 @@ days.forEach(day => {
     })
   })
 })
+
 

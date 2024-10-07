@@ -154,6 +154,21 @@
   <button class="button-add-note button">
     +
   </button>
+  <dialog class="dialog-add-note">
+    <button class="button-close button">
+    </button>
+    <form method="dialog" name="form-add-note" class="form-add-note">
+      <label class="label-add-note__date">
+        <p>Дата</p>
+        <input type="date" class="input-add-note__date" name="input-add-note__date">
+      </label>
+      <label class="label-add-note__text">
+        <p>Текст</p>
+        <textarea class="input-add-note__text" name="input-add-note__text"></textarea>
+      </label>
+      <button type="submit" rows="3" cols="30" class="add-note-button-submit button" name="add-note-button-submit">Добавить</button>
+    </form>
+  </dialog>
   <template id="subjectTemplate">
     <li class="subject">
       <span class="time time-start"></span>
