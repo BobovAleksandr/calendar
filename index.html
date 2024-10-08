@@ -160,11 +160,15 @@
     <form method="dialog" name="form-add-note" class="form-add-note">
       <label class="label-add-note__date">
         <p>Дата</p>
-        <input type="date" class="input-add-note__date input-add-note" name="input-add-note__date">
+        <input required type="date" class="input-add-note__date input-add-note" name="input-add-note__date">
+      </label>
+      <label class="label-add-note__time">
+        <p>Время</p>
+        <input type="time" class="input-add-note__time input-add-note" name="input-add-note__time">
       </label>
       <label class="label-add-note__text">
         <p>Текст</p>
-        <textarea rows="7" cols="35" class="input-add-note__text input-add-note" name="input-add-note__text"></textarea>
+        <textarea required rows="7" cols="35" class="input-add-note__text input-add-note" name="input-add-note__text"></textarea>
       </label>
       <button type="submit" class="add-note-button-submit button" name="add-note-button-submit">Добавить</button>
     </form>

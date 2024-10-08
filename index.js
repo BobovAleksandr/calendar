@@ -1,4 +1,5 @@
 import { days } from './database.js'
+// import { notes } from './notes.js'
 
 const subjectTemplate = document.querySelector('#subjectTemplate').content
 const thingTemplate = document.querySelector('#thingTemplate').content
@@ -40,9 +41,9 @@ addNoteDialogCloseButton.addEventListener('click', () => {
   addNoteDialog.close()
 })
 
-addNoteForm.addEventListener('submit', evt => {
-  evt.preventDefault()
-
+addNoteForm.addEventListener('submit', () => {
+  notes.push(new Note(addNoteInputDate.value, addNoteInputText.value))
+  console.log(notes)
 })
 
 
@@ -67,4 +68,19 @@ days.forEach(day => {
   })
 })
 
+
+
+
+class Note {
+  constructor(date, text, timeStart, timeEnd) {
+    this.date = date,
+    this.name = text,
+    this.timeStart = timeStart,
+    this.timeEnd = timeEnd
+  }
+}
+
+export const notes = [
+  
+]
 
