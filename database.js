@@ -17,9 +17,10 @@ import {
 export const days = [
   {
     id: 1,
-    engName: 'monday',
+    engName: 'mon',
     rusName: 'Понедельник',
-    date: '',
+    dateNumeric: getDateNumeric(1),
+    dateFull: getDateText(1),
     isWeekday: true,
     isHoliday: false,
     subjects: [
@@ -34,9 +35,10 @@ export const days = [
   },
   {
     id: 2,
-    engName: 'tuesday',
+    engName: 'tue',
     rusName: 'Вторник',
-    date: '',
+    dateNumeric: getDateNumeric(2),
+    dateFull: getDateText(2),
     isWeekday: true,
     isHoliday: false,
     subjects: [
@@ -50,9 +52,10 @@ export const days = [
   },
   {
     id: 3,
-    engName: 'wednesday',
+    engName: 'wed',
     rusName: 'Среда',
-    date: '',
+    dateNumeric: getDateNumeric(3),
+    dateFull: getDateText(3),
     isWeekday: true,
     isHoliday: false,
     subjects: [
@@ -65,9 +68,10 @@ export const days = [
   },
   {
     id: 4,
-    engName: 'thursday',
+    engName: 'thu',
     rusName: 'Четверг',
-    date: '',
+    dateNumeric: getDateNumeric(4),
+    dateFull: getDateText(4),
     isWeekday: true,
     isHoliday: false,
     subjects: [
@@ -80,9 +84,10 @@ export const days = [
   },
   {
     id: 5,
-    engName: 'friday',
+    engName: 'fri',
     rusName: 'Пятница',
-    date: '',
+    dateNumeric: getDateNumeric(5),
+    dateFull: getDateText(5),
     isWeekday: true,
     isHoliday: false,
     subjects: [
@@ -94,9 +99,10 @@ export const days = [
   },
   {
     id: 6,
-    engName: 'saturday',
+    engName: 'sat',
     rusName: 'Суббота',
-    date: '',
+    dateNumeric: getDateNumeric(6),
+    dateFull: getDateText(6),
     isWeekday: false,
     isHoliday: false,
     subjects: [
@@ -104,9 +110,10 @@ export const days = [
   },
   {
     id: 7,
-    engName: 'sunday',
+    engName: 'sun',
     rusName: 'Воскресенье',
-    date: '',
+    dateNumeric: getDateNumeric(7),
+    dateFull: getDateText(7),
     isWeekday: false,
     isHoliday: false,
     subjects: [
@@ -115,3 +122,33 @@ export const days = [
   }
 ]
 
+function getTodayDateNumber() {
+  const date = new Date()
+  const options = { day: 'numeric' }
+  return date.toLocaleString('ru-RU', options)
+}
+
+function getTodayDayNumber() {
+  const date = new Date()
+  return date.getDay()
+}
+
+function getYear() {
+  const date = new Date()
+  return date.getFullYear()
+}
+
+function getMonth() {
+  const date = new Date()
+  return date.getMonth()
+}
+
+function getDateText(currentDayNumber) {
+  const dateFull = new Date(getYear(), getMonth(), getTodayDateNumber() - getTodayDayNumber() + currentDayNumber)
+  const options = { month: 'long', day: 'numeric' }
+  return dateFull.toLocaleString('ru-RU', options)
+}
+
+function getDateNumeric(currentDayNumber) {
+  return `${new Date().getFullYear()}-${("0" + ((new Date()).getMonth() + 1)).slice(-2)}-${("0" + (getTodayDateNumber() - getTodayDayNumber() + currentDayNumber)).slice(-2)}`
+}
