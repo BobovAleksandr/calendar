@@ -1,3 +1,6 @@
+@import "fonts.css";
+@import "variables.css";
+
 *, 
 *:after,
 *:before {
@@ -10,13 +13,10 @@ ul {
   list-style: none;
 }
 
-:root {
-  font-family: 'Gotham Pro', sans-serif;
-}
-
 .page {
+  font-family: 'Gotham Pro', sans-serif;
   position: relative;
-  background-color: #d8d8d8;
+  background-color: var(--color-bg);
   padding: 12.5px;
 }
 
@@ -40,7 +40,7 @@ ul {
 
 .day-card__content {
   border-radius: 10px;
-  background-color: #EDEDED;
+  background-color: var(--color-card);
   padding: 10px 10px;
 }
 
@@ -86,19 +86,19 @@ ul {
 }
 
 .subject-name__school {
-  background-color: #D4F6F9;
+  background-color: var(--color-subject-school);
 }
 
 .subject-name__school-section {
-  background-color: #E5FFDE;
+  background-color: var(--color-subjet-section);
 }
 
 .subject-name__note {
-  background-color: #FF9090;
+  background-color: var(--color-subject-note);
 }
 
 .subject-name__train {
-  background-color: #FFE6B8;
+  background-color: var(--color-subject--train);
 }
 
 .time {
@@ -107,7 +107,7 @@ ul {
   height: 22px;
   display: block;
   font-size: 14px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 5px;
   display: grid;
   place-items: center;
@@ -117,7 +117,7 @@ ul {
   list-style-type: disc;
   padding: 5px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .day-card__thing {
@@ -131,19 +131,19 @@ ul {
 }
 
 .button-add-note:hover {
-  background-color: #ad2626;
+  background-color: var(--color-button);
   cursor: pointer;
 }
 
 .button-add-note:active {
-  background-color: #d54848;
+  background-color: var(--color-button-accent);
 }
 
 .button-add-note {
   border-radius: 50%;
   width: 50px;
   aspect-ratio: 1 / 1;
-  background-color: #d54848;
+  background-color: var(--color-button-accent);
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -159,7 +159,7 @@ ul {
   border: none;
   padding: 20px;
   border-radius: 10px;
-  background-color: #EDEDED;
+  background-color: var(--color-card);
 }
 
 .form-add-note {
@@ -170,13 +170,8 @@ ul {
 }
 
 .dialog-add-note::backdrop {
-  background-color: #000;
+  background-color: var(--color-black);
   opacity: 0.5;
-}
-
-.dialog-add-note:open {
-  display: block;
-  background-color: red;
 }
 
 .label-add-note__date {
@@ -209,17 +204,17 @@ ul {
 }
 
 .add-note-button-submit {
-  background-color: #d54848;
+  background-color: var(--color-button-accent);
   font-size: 16px;
   min-height: 3em;
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .add-note-button-submit:hover {
-  background-color: #ad2626;
+  background-color: var(--color-button);
 }
 
 .add-note-button-submit:active {
-  background-color: #d54848;
+  background-color: var(--color-button-accent);
 }

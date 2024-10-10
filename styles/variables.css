@@ -1,0 +1,13 @@
+/* Цвета */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-bg: #d8d8d8;
+  --color-card: #ededed;
+  --color-subject-school: #d4f6f9;
+  --color-subjet-section: #e5ffde;
+  --color-subject-note: #ff9090;
+  --color-subject--train: #ffe6b8;
+  --color-button: #ad2626;
+  --color-button-accent: #d54848;
+}
