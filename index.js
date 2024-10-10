@@ -15,6 +15,7 @@ const addNoteInputText = addNoteForm.elements['input-add-note__text']
 
 const daysElementsArray = [...document.querySelectorAll('.day-card__date')]
 
+// DOTO - вынести тело в функцию
 function createSubjectElement(subject) {
   const newSubjectElement = subjectTemplate.querySelector('.subject').cloneNode(true)
   const subjectName = newSubjectElement.querySelector('.subject-name')
@@ -43,6 +44,7 @@ function saveData() {
   console.log('data saved')
 }
 
+// DOTO - рефактор функции 
 function loadData() {
   const loadedNotes = JSON.parse(localStorage.getItem(('notes')))
   console.log(loadedNotes)
@@ -107,3 +109,6 @@ daysElementsArray.forEach((dayElement, index) => {
 })
 
 loadData()
+
+
+// TODO - функция удаления напоминалки
