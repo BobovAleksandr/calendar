@@ -34,7 +34,6 @@ function createThingElement(thing) {
   return newThingElement
 }
 
-
 function renderNote(noteObject, dayElementList) {
   dayElementList.append(createSubjectElement(noteObject))
 }

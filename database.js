@@ -46,7 +46,8 @@ export const days = [
       new Sport(2, false),
       new Math(3, false),
       new Reading(4, false),
-      new ReadIt(5, false),
+      new Russian(5, false),
+      new ReadIt(6, false),
       new Cheer(8, false),
     ]
   },
